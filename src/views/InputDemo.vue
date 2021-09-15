@@ -1,16 +1,16 @@
 <template>
 <div style="width:300px;">
-<m-input :label="'mohit'" v-model="localValue" :clearable="true"  :iconRight="'light-icon-chevron-down'"
-  >patel </m-input>
+<lv-input label="mohit" v-model="localValue"  :clearable="true"  :iconRight="'light-icon-chevron-down'"
+  />
 </div>
   
 </template>
 
 <script>
-import MInput from '@/components/input';
+import LvInput from '@/components/input';
 export default {
 components:{
-    MInput
+    LvInput
 },
 data(){
     return{

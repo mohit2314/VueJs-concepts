@@ -19,7 +19,11 @@ const routes: Array<RouteRecordRaw> = [
     path: '/input',
     name:'Input',
     component:()=>import ('../views/InputDemo.vue'),
-
+  },
+  {
+    path: '/isv2',
+    name:'Isv',
+    component:()=>import ('../views/Isv2.vue'),
   }
 ]
 
