@@ -1,14 +1,18 @@
 <template>
   <div class="isv-container">
 <usage />
+<br>
+<Summary />
   </div>
 </template>
 
 <script>
 import Usage from '@/components/Usage.vue';
+import Summary from '@/components/Summary.vue';
 export default {
 components:{
-    Usage
+    Usage,
+    Summary
 }
 }
 </script>
