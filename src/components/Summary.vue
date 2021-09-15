@@ -4,7 +4,7 @@
 Summary
 </div>
 <div class="summary-cards-wrap">
-<div v-for="n in 3" :key="n" class="card">
+<div v-for="(n,i) in 3" :key="i" class="card">
 <div class="upper-block separator">
 <div class="month-info">
 <span class="main-head">This month so far</span>
@@ -81,7 +81,7 @@ color: #4F4F4F;
 .card{
     width: 243px;
 
-padding: 16px 6px;
+padding: 28px 6px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -101,7 +101,7 @@ border-radius: 3px;
          font-size: 14px;
          font-weight: 500;
          color: #4F4F4F;
-         margin-bottom: 6px;
+         margin-bottom: 8px;
      } 
      .sub-head{
          font-size: 12px;
@@ -127,7 +127,7 @@ border-radius: 3px;
 
 .bottom-block{
     width: 100%;
-    padding: 24px;
+    padding: 24px 24px 0px 24px;
     // margin-top: 16px;
     display: flex;
     flex-direction: column;
@@ -142,7 +142,7 @@ border-radius: 3px;
         justify-content: space-around;
             font-size: 12px;
             color: #4F4F4F;
-            margin: 10px 0px;
+            margin-bottom: 12px;
 
         .info{
             width: 149px;
@@ -182,6 +182,7 @@ color: #4F4F4F;
         }
     }
 .other-items{
+    margin-top: 12px;
     margin-left: 48px;
     // display: flex;
     // flex-direction: column;
