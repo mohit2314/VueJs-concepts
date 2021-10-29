@@ -24,7 +24,12 @@ const routes: Array<RouteRecordRaw> = [
     path: '/isv2',
     name:'Isv',
     component:()=>import ('../views/Isv2.vue'),
-  }
+  },
+  {
+    path: '/timer',
+    name:'Timer',
+    component:()=>import ('../components/Timer.vue'),
+  },
 ]
 
 const router = createRouter({
