@@ -26,6 +26,11 @@ const routes: Array<RouteRecordRaw> = [
     component:()=>import ('../views/Isv2.vue'),
   },
   {
+    path: '/vmodel',
+    name:'Vmodel',
+    component:()=>import ('../views/VmodelDemo.vue'),
+  },
+  {
     path: '/timer',
     name:'Timer',
     component:()=>import ('../components/Timer.vue'),

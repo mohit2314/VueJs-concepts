@@ -1,15 +1,25 @@
 <template>
-  <div>
+  <div class="pg-container">
     <h3>TIMER</h3>
     <br />
     <br />
-    <div>
-      <label for="time">Insert Time for counter (secs)</label>
+    <!-- <div>
+      <label for="time">Insert Time for 1st counter (secs)</label>
       <input id="time" type="number" v-model="time" />
-    </div>
+    </div><br> -->
+    <div>Section-1 Timer : {{ time1 }} secs</div>
+    <br />
+    <div>Section-2 Timer : {{ time2 }} secs</div>
+    <br />
+    <div>Section-3 Timer : {{ time3 }} secs</div>
+    <br />
 
-    <button @click="startTimer">start timer</button>
-    <div>
+    <button @click="startTimer(time1)">start 1st timer</button>
+    <br />
+    <br>
+    <button @click="startTimer(time2)">start 2nd timer</button>
+
+    <div style="text-align:center;">
       <span>{{ mins }} mins</span> : <span>{{ secs }} secs</span>
     </div>
   </div>
@@ -19,38 +29,46 @@
 export default {
   data() {
     return {
-      mins: null,
-      secs: null,
-      time: 0,
+      mins: 0,
+      secs: 0,
+      time1: 10,
+      time2: 20,
+      time3: 15,
+      timer: null,
     };
   },
 
-  computed: {
-    createTimer() {
-      this.tick();
-      setInterval(this.tick, 1000);
+  computed: {},
+  methods: {
+    startTimer(time) {
+      clearInterval(this.timer);
+      //to avoid 1 sec delay in the start of timer
+      this.tick(time);
+      //make timer global variable
+      this.timer = setInterval(this.tick(time), 1000);
     },
-    tick() {
-      var timerInterval = setInterval(() => {
-        this.mins = Math.trunc(this.time / 60)
-          .toString()
-          .padStart(2, "0");
-        this.secs = this.time % 60;
+    tick(time) {
+      var localTime = time;
 
-        if (this.time === 0) {
+      this.timer = setInterval(() => {
+        this.mins = Math.trunc(localTime / 60)
+          .toString()
+          .padStart(2, 0);
+        this.secs = localTime % 60;
+        if (localTime === 0) {
           clearInterval(timerInterval);
         }
-        this.time--;
 
+        // counter should be decremented after checking the condition of clearInterval to avoid the condition of stopping counter at 1sec instead of 0 sec
+        localTime--;
       }, 1000);
-    },
-  },
-  methods: {
-    startTimer() {
-      this.createTimer;
     },
   },
 };
 </script>
 
-<style></style>
+<style lang="scss">
+.pg-container {
+  padding: 24px;
+}
+</style>
