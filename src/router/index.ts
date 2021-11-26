@@ -40,6 +40,11 @@ const routes: Array<RouteRecordRaw> = [
     name:'Cropper',
     component:()=>import ('../views/Cropper.case.vue'),
   },
+  {
+    path: '/composition',
+    name:'Composition',
+    component:()=>import ('../views/CompositionApi.vue'),
+  },
 ]
 
 const router = createRouter({

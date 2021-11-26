@@ -7,6 +7,7 @@
     <router-link to="/timer">Timer</router-link>
     <router-link to="/vmodel">V Model Demo</router-link>
     <router-link to="/cropper">Cropper Demo</router-link>
+    <router-link to="/composition">Composition</router-link>
 
 
   </div>
