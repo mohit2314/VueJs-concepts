@@ -6,6 +6,7 @@
     <router-link to="/isv2">ISV2</router-link>
     <router-link to="/timer">Timer</router-link>
     <router-link to="/vmodel">V Model Demo</router-link>
+    <router-link to="/cropper">Cropper Demo</router-link>
 
 
   </div>

@@ -35,6 +35,11 @@ const routes: Array<RouteRecordRaw> = [
     name:'Timer',
     component:()=>import ('../components/Timer.vue'),
   },
+  {
+    path: '/cropper',
+    name:'Cropper',
+    component:()=>import ('../views/Cropper.case.vue'),
+  },
 ]
 
 const router = createRouter({
